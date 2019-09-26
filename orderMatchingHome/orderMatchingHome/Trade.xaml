@@ -1,0 +1,76 @@
+﻿<Page x:Class="orderMatchingHome.Trade"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:orderMatchingHome"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Trade">
+
+    <StackPanel>
+        <WrapPanel>
+        <Label FontSize="15">Company's Name</Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" >CMP:</Label>
+                <Label Grid.Row="0" Grid.Column="1" >_____</Label>
+                <Label Grid.Row="0" Grid.Column="2" >% Change:</Label>
+                <Label Grid.Row="0" Grid.Column="3" >______</Label>
+                <Label Grid.Row="1" Grid.Column="0" >High:</Label>
+                <Label Grid.Row="1" Grid.Column="1" >_______</Label>
+                <Label Grid.Row="1" Grid.Column="2" >Low:</Label>
+                <Label Grid.Row="1" Grid.Column="3" >________</Label>
+            </Grid>
+        </WrapPanel>
+        <WrapPanel>
+            <RadioButton x:Name="rbtnBuy" Content="BUY" Margin="10"/>
+            <RadioButton x:Name="rbtnSell" Content="SELL" Margin="10"/>
+        </WrapPanel>
+        <WrapPanel>
+                <RadioButton Margin="20 5" x:Name="rbtnMarket" Content="Market"/>
+                <RadioButton Margin="20 5" x:Name="rbtnLimit" Content="Limit" />
+                <RadioButton Margin="20 5" x:Name="rbtnAllNone" Content="All or None" />
+                <RadioButton Margin="20 5" x:Name="rbtnMinimum" Content="Minimum" />
+            </WrapPanel>
+            <StackPanel Margin="0 40">
+            <WrapPanel>
+                <StackPanel Margin="10 0">
+                    <Label>Quantity</Label>
+                    <TextBox Name="txtQuantity" Width="71"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="10 0">
+                    <Label>Price</Label>
+                    <TextBox Name="txtPrice"  Width="77"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="10 0">
+                    <Label>Total</Label>
+                    <TextBox Name="txtTotal"></TextBox>
+                </StackPanel >
+            </WrapPanel>
+                <WrapPanel>
+            <StackPanel Margin="10 0">
+                    <Label>Minimum Fill</Label>
+                    <TextBox Name="txtMinFill" ></TextBox>
+                </StackPanel>
+                <StackPanel Margin="10 0">
+                    <Label>Disclosed Quantity</Label>
+                    <TextBox Name="txtDQuan" ></TextBox>
+                </StackPanel>
+            </WrapPanel>
+        </StackPanel>
+            <WrapPanel>
+            <Button Name="btnOrder"  Content="PLACE" Width="78" />
+            <Button Name="btnCancel"  Content="CANCEL" Width="78" />
+        </WrapPanel>
+            </StackPanel>
+</Page>
